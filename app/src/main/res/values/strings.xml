@@ -1,0 +1,8 @@
+<resources>
+    <string name="find">Buscar</string>
+    <string name="places_api_key"></string>
+    <string name="btn_next">Avançar</string>
+    <string name="app_name">Desafio Shipp</string>
+    <string name="search_results">Resultados da busca:</string>
+    <string name="find_establishment">Buscar estabelecimento</string>
+</resources>

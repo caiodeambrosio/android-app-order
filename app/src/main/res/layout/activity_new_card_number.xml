@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".activity.NewCardNumberActivity">
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="12sp"
+        android:text="Adicionar Cartão"
+        android:textColor="#222222"
+        android:textSize="16sp"
+        app:fontFamily="@font/sequel_black"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="17dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="2dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="106dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="176dp"
+            android:background="#FFC629">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_master_card" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="48dp"
+                android:src="@drawable/ic_chip_card"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewCardNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:fontFamily="@font/ocr_a_std"
+                android:textColor="#222222"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/gotham_medium"
+        android:text="Número o cartão"
+        android:textColor="#222222"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="191dp" />
+
+    <EditText
+        android:id="@+id/editTextCardNumber"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_edit_text"
+        android:hint="0000 0000 0000 0000"
+        android:fontFamily="@font/gotham_medium"
+        android:inputType="number"
+        android:maxLength="16"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="#222222"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="213dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/buttonNext"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:background="@drawable/button_custom"
+            android:fontFamily="@font/gotham_bold"
+            android:onClick="handleContinue"
+            android:text="@string/btn_next"
+            android:textAllCaps="false"
+            android:textColor="#222222"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:contentDescription="TODO"
+            android:onClick="handleBack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+            tools:ignore="VectorDrawableCompat" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
